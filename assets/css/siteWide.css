@@ -1,0 +1,262 @@
+/* global */
+body {
+    background-color: #dee2e6;
+}
+/* Style pour les citations */
+.quote {
+    font-size: 1.5rem; /* Taille de police plus grande pour mettre en valeur la citation */
+    font-style: italic; /* Style italique pour un effet de citation classique */
+    color: #343a40; /* Couleur sombre pour un bon contraste */
+    text-align: center; /* Centrer le texte */
+    margin: 20px auto; /* Espacement autour de la citation */
+    max-width: 800px; /* Limite la largeur pour une meilleure lisibilité */
+    line-height: 1.6; /* Espacement entre les lignes */
+}
+
+.quote-source {
+    font-size: 0.8rem; /* Taille de police plus petite pour la source */
+    font-weight: bold; /* Met en valeur la source */
+    color: #6c757d; /* Couleur grise pour différencier de la citation */
+    text-align: center; /* Centrer le texte */
+    margin-top: -10px; /* Réduit l'espace entre la citation et la source */
+}
+
+/* # header */
+header {
+    background-color: #f41109; /* Couleur de fond claire et professionnelle */
+    border-bottom: 2px solid #dee2e6; /* Ligne de séparation subtile */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fcfdfd; /* Couleur sombre pour le texte */
+    margin-bottom: 10px;
+}
+
+header nav ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Espacement entre les liens */
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fdfeff; /* Couleur bleue pour les liens */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Animation fluide */
+}
+
+header nav ul li a:hover {
+    background-color: #ff00d9; /* Fond bleu au survol */
+    color: #fff; /* Texte blanc au survol */
+}
+
+/* # main */
+
+main {
+    align-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+    width: 50vw;
+    height: calc(50vw * 0.5625); /* Aspect ratio 16:9 */
+}
+
+main .slogan {
+    text-align: center;
+    background-color: #f41109;
+    font-size: 2rem;
+}
+
+/* ## gallery */
+
+/* Style pour la galerie */
+.carousel {
+    position: relative; /* Assurer child elements avec positions absolute  sont relatif de ce recepient */
+    width: 90%;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+    .carousel {
+        width: 50%;
+    }
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ## slogan */
+.slogan {
+    font-size: 1.5 rem;
+    font-family: cursive;
+    color: #dee2e6;
+}
+
+/* ## news*/
+/* Section des articles */
+#news {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-top: 2px solid #ddd;
+}
+
+.news-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.news-card h3 {
+    font-size: 1.2rem;
+    margin: 10px;
+    color: #333;
+    text-align: center;
+}
+
+.news-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Style pour le footer */
+footer {
+    background-color: #f41109; /* Couleur de fond rouge vif */
+    color: #fcfdfd; /* Texte blanc cassé */
+    padding: 20px;
+    text-align: center;
+    border-top: 3px solid #dee2e6; /* Ligne de séparation subtile */
+    font-size: 0.9rem;
+}
+
+footer nav ul {
+    list-style: none; /* Supprime les puces */
+    padding: 0;
+    margin: 0 0 15px 0; /* Espacement en bas */
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Espacement entre les liens */
+}
+
+footer nav ul li {
+    display: inline;
+}
+
+footer nav ul li a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: #fdfeff; /* Couleur blanche pour les liens */
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Animation fluide */
+}
+
+footer nav ul li a:hover {
+    background-color: #ff00d9; /* Fond rose au survol */
+    color: #fff; /* Texte blanc au survol */
+}
+
+footer p {
+    margin: 5px 0; /* Espacement vertical entre les paragraphes */
+    font-size: 0.8rem;
+    color: #fcfdfd; /* Texte blanc cassé */
+}
+
+footer a {
+    color: #fdfeff; /* Lien blanc */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffc107; /* Couleur jaune au survol */
+}
+
+footer img {
+    margin-top: 10px;
+    width: 100px; /* Taille de l'image */
+    height: auto;
+    opacity: 0.8; /* Légère transparence */
+    transition: opacity 0.3s;
+}
+
+footer img:hover {
+    opacity: 1; /* Opacité complète au survol */
+}
